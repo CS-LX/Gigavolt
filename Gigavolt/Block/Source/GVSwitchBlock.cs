@@ -12,8 +12,10 @@ namespace Game
 
         public readonly BlockMesh switchBodyMesh = new();
         public readonly BlockMesh switchLeverMesh = new();
+
         public readonly BlockMesh[] m_blockMeshesByIndex_Body = new BlockMesh[12];
         public readonly BlockMesh[] m_blockMeshesByIndex_Lever = new BlockMesh[12];
+
         public readonly BoundingBox[][] m_collisionBoxesByIndex = new BoundingBox[12][];
 
         public readonly Texture2D WhiteTexture = Texture2D.Load(new Image(1, 1) { Pixels = { [0] = Color.White } });
@@ -32,7 +34,7 @@ namespace Game
                     Matrix matrix2 = Matrix.CreateRotationX(j == 0 ? MathUtils.DegToRad(30f) : MathUtils.DegToRad(-30f));
                     //主体模型
                     m_blockMeshesByIndex_Body[num] = new BlockMesh();
-                    m_blockMeshesByIndex_Body[num]
+                    m_blockMeshesByIndex_Body[num] 
                     .AppendModelMeshPart(
                         model.FindMesh("Body").MeshParts[0],
                         boneAbsoluteTransform * matrix,

@@ -12,8 +12,10 @@ namespace Game
 
         public BlockMesh m_standaloneBlockMesh_Body = new();
         public BlockMesh m_standaloneBlockMesh_Top = new();
+
         public BlockMesh[] m_blockMeshesByFace_Body = new BlockMesh[6];
         public BlockMesh[] m_blockMeshesByFace_Top = new BlockMesh[6];
+
         public BoundingBox[][] m_collisionBoxesByFace = new BoundingBox[6][];
 
         public readonly Texture2D WhiteTexture = Texture2D.Load(new Image(1, 1) { Pixels = { [0] = Color.White } });
